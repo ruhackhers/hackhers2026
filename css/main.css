@@ -24,6 +24,7 @@ body {
   scroll-snap-type: y mandatory;
   display: flex;
   flex-direction: column;
+  background-color: #0a0c1a;
 }
 
 .star {
