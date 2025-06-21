@@ -722,16 +722,16 @@ iframe {
 }
 
 
-/*@media screen and (max-width: 575px) { /* smartphones */ 
-  #main{ /* to move content further to right */ 
-   /* width: 90%;
+@media screen and (max-width: 575px) { /* smartphones */ 
+  main{ /* to move content further to right */ 
+    width: 90%;
   }
   html,body { /* to fix up background sizing */ 
-   /* background-size: cover; 
+    background-size: cover; 
     background-repeat: no-repeat;
     background-size: 100%; /* Ensure image fits fully */
-  /*  background-image: url('../images/graphics/hackhers-stripped-mobile.png');
-  }*/
+    background-image: url('../images/graphics/hackhers-stripped-mobile.png');
+  }
 
 
 
