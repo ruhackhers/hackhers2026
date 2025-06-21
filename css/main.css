@@ -16,7 +16,6 @@ html, body {
   /*background: #0a0c1a url("../images/graphics/hackhers-stripped-bg.png") no-repeat;
   background-size: cover;*/
   background-color: #0a0c1a !important;
- /* background-image: none !important;*/
 
 }
 
@@ -25,7 +24,6 @@ body {
   scroll-snap-type: y mandatory;
   display: flex;
   flex-direction: column;
-  background-color: #0a0c1a;
 }
 
 .star {
