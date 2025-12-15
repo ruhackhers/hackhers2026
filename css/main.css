@@ -147,7 +147,7 @@ body {
     /* 1. HackHERS Title */
     url("../images/graphics/hackhers-title.png"), 
     /* 2. Dragon Clouds */
-    url("../images/graphics/dragon-clouds.png");
+    url("../images/graphics/dragon-overlay.png");
 
   background-size: 
     700px auto, /* Size for hackhers-title.png */
