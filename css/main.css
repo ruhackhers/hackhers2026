@@ -24,6 +24,7 @@ body {
   scroll-snap-type: y mandatory;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .star {
@@ -269,9 +270,9 @@ body {
   position: relative;
 
   /* City background */
-  background: url("../images/graphics/city-overlay-with-text.png") no-repeat;
+  background: url("../images/graphics/city-overlay-with-text-copy.png") no-repeat;
   background-size: 100% auto;
-  background-position: center -600px;
+  background-position: center -165px;
   z-index: 10;
 }
 
@@ -289,7 +290,7 @@ body {
   
   /* 🆕 ADD: Give it a max width to keep the date/location closer together */
   max-width: 80%; /* Adjust this value to control the spread */
-  margin-top: 350px;
+  margin-top: 250px;
   gap: 10%
 }
 
@@ -328,7 +329,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  margin-top: 50px;
+  margin-top: 15%;
 }
 
 #since-2015 {
@@ -342,7 +343,7 @@ body {
 /* Stats Container */
 .stats-container {
   display: flex;
-  flex-direction: column;  /* CHANGED: Vertical stack */
+  flex-direction: row;  /* CHANGED: Vertical stack */
   align-items: flex-end;
   gap: 40px;
 }
@@ -383,7 +384,7 @@ body {
 }
 
 /* TRACKS section */
-
+/*
 .section#tracks {
   margin-top: 60vh;
   font-family: 'Quicksand', sans-serif;
@@ -403,7 +404,7 @@ body {
   justify-content: center;
   padding: 4vh;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Default: 4 boxes per row */
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
 }
 
@@ -414,7 +415,7 @@ body {
 
 
 .section#tracks .image-container {
-  background-color: rgba(79, 80, 120, 0.8); /* 4F5078 with 80% opacity */
+  background-color: rgba(79, 80, 120, 0.8);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 250px;
@@ -423,10 +424,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: visible; /* Allow image to expand outside container */
-  transition: transform 0.3s ease; /* Smooth transition effect */
-
-
+  overflow: visible; 
+  transition: transform 0.3s ease;
 }
 
 
@@ -434,11 +433,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease; /* Smooth transition effect */
+  transition: transform 0.3s ease;
 }
 
 .image-container:hover .character-image {
-  transform: scale(1.2); /* Slightly enlarge the image */
+  transform: scale(1.2); 
 }
 
 .section#tracks h3 {
@@ -453,9 +452,10 @@ body {
   margin-top: 10px;
   line-height: 1.4;
 }
+*/
 
 /* SCHEDULE section */
-
+/*
 .section#schedule{
   margin-top: 20vh;
   text-align: center;
@@ -520,10 +520,10 @@ body {
   text-align: right;
   color: #c8d5ed;
 }
-
+*/
 
 /* social media links*/
-
+/*
 .list-inline {
   padding-left: 0;
   list-style: none;
@@ -546,17 +546,32 @@ list-inline > li {
   padding-left: 5px;
   padding-right: 5px;
 }
-
+*/
 
 /* FAQ section */
 .section#faq {
-  margin-top: 30vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
   font-family: 'Quicksand', sans-serif;
 
+
+  /* FAQ background */
+  background: url("../images/graphics/faq-overlay-with-text-copy.png") no-repeat;
+  background-size: 100% auto;
+  background-position: center -250px;
+  z-index: 10;
 }
 
+
 #faq {
-  text-align: left;
+  text-align: center;
 
 }
 
@@ -568,7 +583,7 @@ list-inline > li {
   text-align: center;
   color: white;
   font-size: 20px;  
-  padding: 20px;
+  padding-top: 40%;
 }
 
 #faq a {
@@ -577,7 +592,7 @@ list-inline > li {
 }
 
 #faq-content {
-  display: flex; /* Use flexbox for layout */
+  display: flex;
   justify-content: space-evenly;
   max-width: 1000px;
   margin: 0 auto;
@@ -586,8 +601,8 @@ list-inline > li {
 
 .faq {
   list-style: none;
-  padding: 0; /* Reset padding */
-  margin: 0; /* Reset margin */
+  padding: 0;
+  margin: 0;
 }
 
 .faq-column {
@@ -596,8 +611,9 @@ list-inline > li {
 }
 
 /* Same styles for questions and answers in both columns */
+
 .faq .question:after {
-  content: '\002B'; /* Unicode character for "plus" sign (+) */
+  content: '\002B';
   font-size: 20px;
   color: white;
   float: right;
@@ -605,7 +621,7 @@ list-inline > li {
 }
 
 .faq .active .question:after {
-  content: "\2212"; /* Unicode character for "minus" sign (-) */
+  content: "\2212";
   color: white;
 
 }
@@ -637,7 +653,7 @@ list-inline > li {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease, padding-bottom 0.5s ease;
-  color: #C8D5ED;
+  color: #384d75;
 }
 
 .faq li.active .answer {
@@ -742,6 +758,7 @@ iframe {
   padding-left: 20px;
   font-family: "Quicksand", sans-serif;
   bottom: 0;
+  margin-top: 50vh;;
 }
 
 #footer p {
@@ -814,6 +831,7 @@ iframe {
     background-repeat: no-repeat;
     background-size: 100%; /* Ensure image fits fully */
     background-image: url('../images/graphics/hackhers-stripped-mobile.png');
+    min-height: 100vh
   }
 
 
@@ -976,7 +994,7 @@ iframe {
 }
 
 #footer {
-  margin-top: 500px; 
+  margin-top: auto; 
 }
 
 .dino-image { /* adjust dino size */
@@ -1037,11 +1055,14 @@ iframe {
 
 /* FAQ SECTION */
 .section#faq{
-  margin: 0;
-  margin-top: 20vh;
+  /* FAQ background */
+  background: url("../images/graphics/faq-overlay-with-text.png") no-repeat;
+  background-size: 100% auto;
+  z-index: 10;
 }
 
-#faq .additional-questions { 
+
+#faq .additional-questions {
   font-family: 'Quicksand', sans-serif;
   font-size: 15px;
   text-align: center;
