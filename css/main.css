@@ -1067,6 +1067,7 @@ iframe {
   /* FAQ background */
   background: url("../images/graphics/faq-overlay-with-text.png") no-repeat;
   background-size: 100% auto;
+  /*background-position: center 200px;*/ /*to move background down*/ 
   z-index: 10;
 }
 
