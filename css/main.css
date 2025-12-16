@@ -79,9 +79,6 @@ body {
   display: none;
 }
 
-.section {
-  font-size: 1.5em;
-}
 
 /* MAIN section */
 .section-title {
@@ -149,6 +146,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 40px; 
+  font-size: 30px;
 }
 
 #title-date {
@@ -159,9 +157,21 @@ body {
   letter-spacing: 0;
   margin: 0;
   text-align: center;
+  color: #C8D5ED;
 }
 
-#title-location {
+#title-month {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+  text-align: center;
+  color: #9BBDEE;
+}
+
+#title-campus {
   font-family: 'Sen', sans-serif;
   font-weight: 400;
   font-size: 26px;
@@ -169,6 +179,18 @@ body {
   letter-spacing: 0;
   margin: 0;
   color: #C8D5ED;
+  margin-top: 0;
+  text-align: center;
+}
+
+#title-building {
+  font-family: 'Sen', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+  color: #9BBDEE;
   margin-top: 0;
   text-align: center;
 }
@@ -235,7 +257,7 @@ body {
 
 #paragraph {
   font-family: 'Schoolbell', cursive;
-  font-size: 22px;
+  font-size: 28px;
   line-height: 1.8;
   color: white;
   text-align: left;
@@ -283,7 +305,7 @@ body {
 
 .stats-column p {
   font-family: 'Schoolbell', cursive;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: white;
   margin: 0;
   font-weight: 400;
@@ -338,7 +360,7 @@ body {
   color: white;
 }
 
-#faq-content {
+#all-questions {
   display: flex;
   justify-content: space-evenly;
   max-width: 1000px;
@@ -685,12 +707,9 @@ iframe {
       center 80px;
   }
 
-  #title-details-wrapper {
-    max-width: 90%;
-  }
-
   #date-group, #location-group {
     margin-top: 0;
+    color: #3f6dac;
   }
 
   .navbar li a.register-btn {
@@ -701,7 +720,7 @@ iframe {
   .section#about {
     background-size: cover;
     background-position: center -50px;
-    min-height: 30vh;
+    margin-bottom: 70vh;
   }
 
   #about-details-wrapper {
@@ -726,23 +745,12 @@ iframe {
     margin-top: 20px;
   }
 
-  .stats-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .stats-column {
-    align-items: center;
-    text-align: center;
-  }
-
   .section#faq {
     background-size: cover;
     background-position: center -100px;
   }
 
-  #faq-content {
+  #all-questions {
     flex-direction: column;
     max-width: 90%;
   }
@@ -793,8 +801,7 @@ iframe {
   }
 
   .section-content {
-    margin-top: 20vh;
-    width: 100%;
+    margin-top: 20px;
   }
 
   #title-name {
@@ -802,17 +809,19 @@ iframe {
     margin-top: 60px; 
   }
 
-  #title-date {
-    font-size: 15px;
-  }
-
-  #title-location {
-    font-size: 15px;
+  #title-date, #title-month, #title-campus, #title-building {
+    font-size: 20px;
   }
 
   #title-details-wrapper {
     flex-direction: row;
     justify-content: space-around;
+    gap: 10%;
+  }
+
+  #date-group, #location-group {
+    margin-top: 0;
+    color: #3f6dac;
   }
 
   .navbar {
@@ -883,53 +892,59 @@ iframe {
   }
 
   .section#about{
-    min-height: 50vh;
+    margin-bottom: 70vh;
+    min-height: 15vh;
   }
 
   #about-details-wrapper {
-    margin-top: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 100%;
+
   }
 
-  #about-info {
-    position: relative;
-    padding-top: 0;
-    margin-top: 0;
-  }
-
-  #about-info .paragraph-container {
-    max-width: 155px;
-    text-align: right;
-    margin-top: 0;
-  }
-
-  #about-info #paragraph {
-    color: #ffffff;
-    font-size: 0.75rem;
-    margin: 0;
-  }
-
-  #about-info .stats-container {
-    max-width: 160px;
-    padding: 0;
+  .paragraph-container {
+    flex: none;
+    width: 100%;
     margin: 0;
     text-align: center;
   }
 
-  #about-info .stats-column h2 {
+  #paragraph {
     text-align: center;
-    font-size: 13px;
+    font-size: 1.2rem;
+  }
+
+  .right-content {
+    flex: none;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stats-column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .stats-column h2 {
     color: #9BBDEE;
     font-weight: 700;
+    font-size: 3rem;
+
   }
 
-  #about-info .stats-column p {
-    font-size: 10px;
+  .stats-column p {
     color: white;
-  }
-
-  #about-info #since-2015 {
-    font-size: 0.75rem;;
-    margin: 0;
   }
 
   .coming {
@@ -937,7 +952,7 @@ iframe {
     color: white;
   }
 
-  #about-info .counter{
+  .counter{
     margin: 0;
   }
 
@@ -1006,6 +1021,7 @@ iframe {
     z-index: 10;
     min-height: 200vh;
     margin-bottom: 20vh;
+    margin-top: 20vh;
   }
 
   #faq .additional-questions {
@@ -1031,7 +1047,11 @@ iframe {
     color: white;
   }
 
-  #faq-content {
+  .faq-content {
+    margin-top: 30vh;
+  }
+
+  #all-questions {
     font-family: 'Quicksand', sans-serif;
     display: flex;
     justify-content: space-evenly;
@@ -1135,8 +1155,8 @@ iframe {
     font-size: 80px;
   }
 
-  #title-date {
-    font-size: 22px;
+  #title-date, #title-month, #title-campus, #title-building {
+    font-size: 30px;
   }
 }
 
@@ -1159,7 +1179,7 @@ iframe {
     display: none;
   }
 
-  #faq-content {
+  #all-questions {
     display: flex;
     flex-direction: column;
     font-size: 0.9em;
@@ -1170,7 +1190,7 @@ iframe {
     padding-top: 100px;
   }
 
-  #faq-content ul {
+  #all-questions ul {
     margin-bottom: -11vh;
   }
 
@@ -1260,11 +1280,6 @@ iframe {
   #about{
     padding-top: 30px;
     padding-bottom: 30px;
-  }
-
-  #faq{
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   #faq-right{
