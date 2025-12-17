@@ -61,6 +61,9 @@ body {
   z-index: 0;
 }
 
+a, button, i{
+  cursor: pointer !important;
+}
 
 
 /*styling navbar*/
@@ -155,6 +158,8 @@ body {
     center 15vh;
 
   background-repeat: no-repeat, no-repeat;
+  pointer-events: none; /* allows clicks and hover to pass through */
+  z-index: 0; 
 }
 
 #title-details-wrapper {
