@@ -1215,6 +1215,11 @@ iframe {
     margin-top: 30vh;    
   }
 
+  #title-register {
+  margin-top: 6vh;   /* try 4–8vh */
+  }
+
+
   .faq-content {
     margin-top: 50vh;
   }
