@@ -377,6 +377,8 @@ a, button, i{
   text-align: center;
   position: relative;
   z-index: 1;
+  font-family: "Quicksand", sans-serif;
+
 }
 
 .faq-content {
@@ -411,7 +413,6 @@ a, button, i{
   list-style: none;
   padding: 0;
   margin: 0;
-  font-family: "Quicksand", sans-serif;
 }
 
 .faq-column {
