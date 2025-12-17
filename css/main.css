@@ -41,10 +41,7 @@ body {
 
 .navbar li a {
   font-size: 22px;
-  margin: 0;
-  line-height: 24px;
   color: white;
-  margin: 4px;
 }
 .navbar li a:hover {
   color: #9BBDEE;
@@ -59,13 +56,11 @@ body {
   color: #9BBDEE;
 }
 
-/* Register Button Styling */
+/* Main (Non-Nav) Register Button Styling */
 
 .navbar li a.register-btn {
   background-color: #2A5482;
-  padding: 10px 40px;
   border-radius: 16px;
-  margin-right: 15px;
   transition: all 0.3s ease;
 }
 
@@ -89,15 +84,17 @@ body {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.2), 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-.section-content {
+.title-content {
   width: 80%; 
   max-width: 1200px;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 20;
-  margin-top: 400px;
+  margin-top: 18vh;
+}
+
+.faq-content {
+  margin-top: 100vh;
 }
 
 /* TITLE section */
@@ -105,10 +102,9 @@ body {
   display: flex;
   flex-direction: column; 
   justify-content: center;
-  padding: 250px;
   align-items: center;
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
   margin-top: 0; 
   margin-bottom: 0;
 
@@ -121,8 +117,8 @@ body {
     cover;
 
   background-position: 
-    center min(100px, 15vh),
-    center min(100px, 15vh);
+    center 15vh, 
+    center 15vh;
 
   background-repeat: no-repeat, no-repeat;
 }
@@ -132,21 +128,22 @@ body {
   justify-content: space-around;
   width: 100%;
   max-width: 700px;
+  font-size: 30px;
+
 }
 
 #date-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px; 
+  margin-top: 6vh; 
 }
 
 #location-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px; 
-  font-size: 30px;
+  margin-top: 2vh; 
 }
 
 #title-date {
@@ -196,27 +193,25 @@ body {
 }
 
 #title-register {
-  background-color: rgba(160, 72, 188, 1);
-  border: 4.5px solid #CD94DF;
-  border-radius: 30px;
-  margin-top: 25px;
+  background-color: #2A5482;
+  padding: 8px 20px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  font-size: 22px;
   color: white;
-  font-weight: bold;
-  font-size: 30px;
+  border: 2px solid rgba(155, 189, 238, 0.8);
+  font-family: 'Quicksand', sans-serif;
+  box-shadow: 0 0 20px rgba(155, 189, 238, 0.5),
+              inset 0 0 15px rgba(155, 189, 238, 0.2);
 }
 
 #title-register:hover {
-  background-color: #8063a1; 
-  color: #ffc8ea; 
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px); 
+  background-color: #276BB8;
+  color: white !important;
+  border-color: rgba(155, 189, 238, 1);
+  box-shadow: 0 0 40px rgba(155, 189, 238, 0.9),
+              inset 0 0 25px rgba(155, 189, 238, 0.4);
 }
-
-#title-register:active {
-  transform: translateY(0); 
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
-}
-
 /* ABOUT section */
 .section#about {
   display: flex;
@@ -246,13 +241,13 @@ body {
   width: 100%;
   max-width: 80%;
   margin-top: 350px;
-  gap: 10%
+  gap: 15%
 }
 
 .paragraph-container {
   flex: 0 0 65%;
-  margin-top: 200px;
-  margin-left: -70px
+  margin-top: 100px;
+  margin-left: -70px;
 }
 
 #paragraph {
@@ -269,7 +264,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  margin-top: 15%;
+  margin-top: 100px;
 }
 
 #since-2015 {
@@ -297,7 +292,7 @@ body {
 .stats-column h2 {
   font-family: 'Schoolbell', cursive;
   font-size: 4rem;
-  color: white;
+  color: #9BBDEE;
   font-weight: 400;
   margin: 0;
   margin-bottom: 10px;
@@ -330,7 +325,7 @@ body {
   width: 100%;
   min-height: 100vh;
   margin-top: 0;
-  margin-bottom: 40vh;
+  margin-bottom: 20vh;
   position: relative;
   font-family: 'Quicksand', sans-serif;
 
@@ -338,10 +333,6 @@ body {
   background-size: cover;
   background-position: center top;
   z-index: 10;
-}
-
-.faq-content {
-  margin-top: 60vh;
 }
 
 #faq {
@@ -515,30 +506,35 @@ iframe {
 
 /*footer*/
 
-#footer {
-  position: relative;
+/*#footer {
+  /* old footer */
+  /* position: relative;
   width: 100%;
   background-color: #0f102f;
   padding: 30px;
   padding-left: 20px;
   font-family: "Quicksand", sans-serif;
   bottom: 0;
-  margin-top: 50vh;
+  margin-top: 50vh; 
+}*/
+/*footer*/
+
+#footer {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  margin-top: -600px; 
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 #footer p {
   margin: 0;
 }
 
-.footer-left {
-  float: left;
-  width: 25%;
-}
-
-.made-with {
-  text-align: center;
-  width: 75%;
-  color: white;
+#footer h3 {
+  font-size: 4rem;
 }
 
 #footer .made-with p {
@@ -546,41 +542,42 @@ iframe {
   font-size: 12px;
 }
 
-.footer-logo {
-  width: 80px;
-  overflow: hidden;
-}
-
-.footer-img {
-  width: 100%;
-}
-
-.social-icons a {
-  position: left;
-  width: 200px;
+/* Contact overlay on the right */
+.contact-info {
+  text-align: right;
+  font-family: 'Schoolbell', cursive;
   color: white;
+  margin-right: 10vh;
+
 }
 
-#mlh-trust-badge {
-  display: block;
-  max-width: 100px;
-  min-width: 60px;
-  position: fixed;
-  right: 50px;
-  top: 0;
-  width: 10%;
-  z-index: 10000;
+.contact-info h2 {
+  font-size: 96px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  font-family: 'Schoolbell', cursive;
 }
 
-#mlh-trust-badge img {
-  width: 100%;
+.contact-info p {
+  font-size: 35px;
+  margin-bottom: 40px;
+  font-family: 'Schoolbell', cursive;
 }
 
-.social-icons  {
-  text-align: left;
-  width: 200px;
-  margin-right: 1ch;
+.contact-info .contact-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  font-size: 64px;
+}
+
+.contact-info .contact-icons a {
   color: white;
+  transition: transform 0.3s ease;
+}
+
+.contact-info .contact-icons a:hover {
+  transform: scale(1.1);
 }
 
 /* MEET THE TEAM SECTION */
@@ -685,6 +682,15 @@ iframe {
   line-height: 21.25px;
 }
 
+.section#contact-overlay {
+  width: 100%;
+  min-height: 120vh; /* important! */
+  background-image: url("../images/graphics/footer-overlay.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
 /* ========================================
    MEDIA QUERIES - RESPONSIVE DESIGN
    ======================================== */
@@ -695,37 +701,12 @@ iframe {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-  }
-
-  .section#title {
-    min-height: 30vh; 
-    height: auto;
-    padding: 0;
-    background-size: 
-      80vw auto,
-      cover;
-    background-position: 
-      center 80px,
-      center 80px;
+    overflow-x: hidden;
   }
 
   #date-group, #location-group {
     margin-top: 0;
     color: #3f6dac;
-  }
-
-  .navbar li a.register-btn {
-    padding: 6px 15px;
-    font-size: 16px;
-  }
-
-  .section#about {
-    background-size: cover;
-    background-position: center -50px;
-  }
-
-  #about-details-wrapper {
-    margin-top: 200px;
   }
 
   .paragraph-container {
@@ -744,11 +725,6 @@ iframe {
     align-items: center;
     text-align: center;
     margin-top: 20px;
-  }
-
-  .section#faq {
-    background-size: cover;
-    background-position: center -100px;
   }
 
   #all-questions {
@@ -779,6 +755,29 @@ iframe {
     min-height: 100vh;
     background-position: center center;
     background-attachment: fixed;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+
+  .contact-info {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .contact-info p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info .contact-icons {
+    justify-content: center;
+    font-size: 36px;
+    gap: 20px;
+  }
+
+  .section#contact-overlay {
+    min-height: 30vh;
   }
 
   #mlh-trust-badge {
@@ -791,18 +790,14 @@ iframe {
 
   .section#title {
     min-height: 50vh; 
-    height: auto;
     margin: 0;
-    background-size: 
-      85vw auto,
-      cover;
     background-position: 
       center 60px,
       center 60px;
   }
 
-  .section-content {
-    margin-top: 20px;
+  .title-content {
+    margin-top: 15vh;
     width: 100%;
   }
 
@@ -812,18 +807,19 @@ iframe {
   }
 
   #title-date, #title-month, #title-campus, #title-building {
-    font-size: 20px;
+    font-size: 15px;
+    color: #384d75;
   }
 
   #title-details-wrapper {
     flex-direction: row;
     justify-content: space-around;
     gap: 10%;
+    margin-top: 20px;
   }
 
   #date-group, #location-group {
     margin-top: 0;
-    color: #3f6dac;
   }
 
   .navbar {
@@ -835,7 +831,7 @@ iframe {
   }
 
   .dropbtn {
-    background-color: rgba(187, 123, 207, 0.764);  
+    background-color: #3f6dac;  
     color: white; 
     font-size: 15px; 
     padding: 10px;
@@ -878,24 +874,16 @@ iframe {
   }
 
   .dropdown:hover .dropbtn { 
-    background-color: #8063a1; 
-    color: #ffc8ea; 
+    background-color: #384d75; 
   } 
-
-  #title-register{
-    padding: 6px;
-    margin-top: 10px;
-    font-size: 10px; 
-    border: 3px solid #CD94DF;
-  }
 
   .section-title {
     font-size: 24px;
   }
 
   .section#about{
-    margin-bottom: 100vh;
-    min-height: 15vh;
+    margin-bottom: 70vh;
+    min-height: 45vh;
   }
 
   #about-details-wrapper {
@@ -904,7 +892,7 @@ iframe {
     justify-content: center;
     gap: 30px;
     max-width: 100%;
-
+    margin-top: 250px;
   }
 
   .paragraph-container {
@@ -959,7 +947,8 @@ iframe {
   }
 
   #footer {
-    margin-top: auto; 
+    margin-top: -400px;
+    justify-content: center;
   }
 
   .dino-image {
@@ -1019,11 +1008,7 @@ iframe {
 
   .section#faq{
     background: url("../images/graphics/faq-overlay-with-text-copy.png") no-repeat;
-    background-size: 100% auto;
-    z-index: 10;
     min-height: 200vh;
-    margin-bottom: 20vh;
-    margin-top: 20vh;
   }
 
   #faq {
@@ -1051,7 +1036,7 @@ iframe {
   }
 
   .faq-content {
-    margin-top: 30vh;
+    margin-top: 70vh;
   }
 
   #all-questions {
@@ -1313,42 +1298,21 @@ iframe {
   }
 }
 
-/* Very small phones (300px to 499px) */
-@media (min-width: 300px) and (max-width: 499px) {
-  #team .team-wrapper {
-    width: 100%;
+/* Short screens: iphone se (375 x 667), samsung galaxy s8 (360 x 740) */
+@media screen and (max-height: 750px) and (max-width: 575px) {
+  .title-content {
+    margin-top: 30vh;    
+  }
+  .section#about{
+    margin-bottom: 100vh;
+    min-height: 45vh;
   }
 
-  #logo{
-    width: 250px;
-    height: 200px;
-    margin-top: 10vh;
+  .section#faq {
+    min-height: 300vh;
   }
 
-  #hack-date {
-    font-size: 4px;
-  }
-
-  #filler-3 {
-    display: none;
-  }
-
-  #app_buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 65vw; 
-  }
-
-  #header-below h4{
-    font-size: 15px;
-  }
-
-  #header-below h1{
-    font-size: 40px;
-  }
-
-  .section#sponsors .sponsor-thanks h4{
-    font-size: 15px;
+  .faq-content {
+    margin-top: 90vh;
   }
 }
