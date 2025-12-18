@@ -113,31 +113,11 @@ a, button, i{
   display: none;
 }
 
-
-/* MAIN section */
-.section-title {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 50px;
-  color: #C8D5ED;
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.2), 0 0 8px rgba(255, 255, 255, 0.2);
-}
-
-.title-content {
-  width: 80%; 
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 18vh;
-  z-index: 10;
-}
-
 /* TITLE section */
 #title {
   display: flex;
   flex-direction: column; 
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   min-height: 100vh;
@@ -159,8 +139,24 @@ a, button, i{
     center 15vh;
 
   background-repeat: no-repeat, no-repeat;
-  pointer-events: none; /* allows clicks and hover to pass through */
+  pointer-events: none;
   z-index: 0; 
+}
+
+.title-content {
+  width: 80%; 
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  margin: 0 auto 0 auto;
+}
+
+/* Add a spacer div to reserve space for the title image so it doesn't overlap */
+#title-image-spacer {
+  height: min(700px * 0.7, 63vw);
+  width: 100%;
 }
 
 #title-details-wrapper {
@@ -169,7 +165,11 @@ a, button, i{
   width: 100%;
   max-width: 700px;
   font-size: 30px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 
+    0 0 20px rgba(45, 44, 59, 0.9),
+    0 0 30px rgba(45, 44, 59, 0.7),
+    0 0 40px rgba(45, 44, 59, 0.5),
+    2px 2px 4px rgba(45, 44, 59, 0.8);
 }
 
 #date-group {
@@ -236,7 +236,6 @@ a, button, i{
   background-color: #2A5482;
   padding: 8px 20px;
   border-radius: 16px;
-  margin-top: 15vh;
   transition: all 0.3s ease;
   font-size: 22px;
   color: white;
@@ -254,22 +253,6 @@ a, button, i{
               inset 0 0 25px rgba(155, 189, 238, 0.4);
 }
 /* ABOUT section */
-/* .section#about {
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  margin-top: 0;
-  margin-bottom: 0;
-  position: relative;
-
-  background: url("../images/graphics/city-overlay-with-text-copy.png") no-repeat;
-  background-size: cover;
-  background-position: center top;
-  z-index: 10;
-} */
 
 #about::before {
   background-image:
@@ -556,19 +539,6 @@ iframe {
 
 /*footer*/
 
-/*#footer {
-  /* old footer */
-  /* position: relative;
-  width: 100%;
-  background-color: #0f102f;
-  padding: 30px;
-  padding-left: 20px;
-  font-family: "Quicksand", sans-serif;
-  bottom: 0;
-  margin-top: 50vh; 
-}*/
-/*footer*/
-
 #footer {
   position: relative;
   background-image: url('../images/graphics/footer-overlay.png');
@@ -597,7 +567,11 @@ iframe {
   color: white;
   margin-right: 100px;
   margin-top: 300px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 
+  0 0 20px rgba(45, 44, 59, 0.9),
+  0 0 30px rgba(45, 44, 59, 0.7),
+  0 0 40px rgba(45, 44, 59, 0.5),
+  2px 2px 4px rgba(45, 44, 59, 0.8);
 }
 
 #footer h3 {
@@ -786,20 +760,15 @@ iframe {
     width: 60%;
   }
 
-#title {
-  min-height: 50vh; 
-  margin: 0;
-}
+  #title {
+    min-height: 50vh; 
+    margin: 0;
+  }
 
-#title::before {
-  background-position: 
-    center 60px,
-    center 60px;
-}
-
-  .title-content {
-    margin-top: 15vh;
-    width: 100%;
+  #title::before {
+    background-position: 
+      center 60px,
+      center 60px;
   }
 
   #title-name {
@@ -1090,10 +1059,6 @@ iframe {
       cover;
   }
 
-  .title-content {
-    margin-top: 10vh;
-  }
-
   #about-info {
     margin-top: 400px;
   }
@@ -1194,10 +1159,6 @@ iframe {
 
 /* Larger tablets (ipad pro) and small desktops (max-width: 1300px) */
 @media (min-width: 956px) and (max-width: 1300px) {
-  .title-content {
-    margin-top: 200px;
-  }
-
   #about-info {
     margin-top: 350px;
   }
@@ -1208,21 +1169,5 @@ iframe {
 
   .faq-content {
     margin-top: 600px;
-  }
-}
-
-/* Short screens: iphone se (375 x 667), samsung galaxy s8 (360 x 740) */
-@media screen and (max-height: 750px) and (max-width: 575px) {
-  .title-content {
-    margin-top: 30vh;    
-  }
-
-  #title-register {
-  margin-top: 1vh;   /* try 4–8vh */
-  }
-
-
-  .faq-content {
-    margin-top: 50vh;
   }
 }
