@@ -378,7 +378,7 @@ a, button, i{
 
 #faq a {
   font-weight: bold;
-  color: white;
+  color: #384d75;
 }
 
 #faq .additional-questions {
@@ -978,11 +978,6 @@ iframe {
 
   #faq h1{
     text-align: center;
-  }
-
-  #faq a {
-    font-weight: bold;
-    color: white;
   }
 
   #faq .additional-questions {
