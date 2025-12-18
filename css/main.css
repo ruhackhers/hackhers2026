@@ -145,12 +145,11 @@ a, button, i{
 
 .title-content {
   width: 80%; 
-  max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 10;
-  margin: 0 auto 0 auto;
+  /* margin: 0 auto 0 auto; */
 }
 
 /* Add a spacer div to reserve space for the title image so it doesn't overlap */
@@ -461,82 +460,6 @@ a, button, i{
   margin-left: 40vh;
 }
 
-/*team styling*/
-
-.section#team{
-  margin-top: 130vh;
-  text-align: center;
-}
-
-#team{
-  text-align: center;
-}
-
-#team .row{
-  margin-top: 30px;
-  width: 100%;
-}
-
-#team .section-title{
-  text-align: center;
-}
-
-.team-wrapper{
-  width: 300px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  text-align:center;
-}
-
-.team .team-wrapper .lead{
-  padding: 1rem;
-  position: absolute;
-  background-color: transparent;
-  left: 4px;
-  right: 4px;
-  top: 0;
-  text-align:center;
-}
-
-#team h4, #team h6{
-  color: white;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 20px;
-}
-
-#team h6{
-  font-size: 15px;
-  font-weight: 300;
-  color: white;
-  opacity: 0.9;
-}
-
-#team h4{
-  font-size: 20px;
-  margin-bottom: 0;
-  font-weight: 400;
-  color: #b6bde0;
-  padding-top: 12px;
-}
-
-#team .team-wrapper img{
-  height: 200px;
-  width: 200px;
-  border-radius: 20px;
-}
-
-/* map */
-
-iframe {
-  display: block; 
-  margin: 0 auto; 
-  border: 0;
-  max-width: 80%; 
-  height: 300px; 
-}
-
 /*footer*/
 
 #footer {
@@ -551,22 +474,15 @@ iframe {
   min-height: 100vh;
 }
 
-#footer p {
-  margin: 0;
-}
-
-#footer .made-with p {
-  font-weight: 300;
-  font-size: 12px;
-}
-
-/* Contact overlay on the right */
+/* contact overlay on the right */
 .contact-info {
   text-align: right;
   font-family: 'Schoolbell', cursive;
   color: white;
   margin-right: 100px;
   margin-top: 300px;
+  padding-bottom: 300px;
+
   text-shadow: 
   0 0 20px rgba(45, 44, 59, 0.9),
   0 0 30px rgba(45, 44, 59, 0.7),
@@ -574,132 +490,41 @@ iframe {
   2px 2px 4px rgba(45, 44, 59, 0.8);
 }
 
-#footer h3 {
+/* gives discord icon a drop shadow as well since it's a svg, not text */
+.contact-icons svg
+{
+  filter: drop-shadow(0px 0px 20px rgba(45, 44, 59, 0.9))
+          drop-shadow(0px 0px 30px rgba(45, 44, 59, 0.7))
+          drop-shadow(0px 0px 40px rgba(45, 44, 59, 0.5))
+          drop-shadow(2px 2px 4px rgba(45, 44, 59, 0.8));
+}
+
+.contact-info h3 {
   font-size: 4rem;
 }
 
 .contact-info p {
   font-size: 35px;
-  margin-bottom: 40px;
 }
 
-.contact-info .contact-icons {
+.contact-icons {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
   font-size: 64px;
 }
 
-.contact-info .contact-icons a {
-  color: white;
+.contact-icons a {
   transition: transform 0.3s ease;
+  color: white;
 }
 
-.contact-info .contact-icons a:hover {
+.contact-icons a:hover {
   transform: scale(1.1);
+  color: white;
 }
 
 /* MEET THE TEAM SECTION */
-
-.tabcontent{
-  margin: 20px 20px;
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;  
-}
-
-.tabcontent.active {
-  display: flex;
-}
-
-.tab {
-  display: flex;
-  justify-content: space-around;
-  justify-content: flex-start;
-  border-bottom: 1.5px solid white;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.tablinks {
-  background-color: transparent;
-  font-family: 'Quicksand', sans-serif;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 10px 20px;
-  margin: 0;
-  margin-top: 40px; 
-  font-size: 16px;
-  color: white;
-  transition: 0.3s ease, color 0.3s ease;
-}
-
-.tab .tablinks:hover {
-  background-color: #2d2c3b;
-  color: #ffffff;
-  border-radius: 4px 4px 0 0;  
-}
-
-.tab .tablinks.active {
-  background-color: #342d5e;
-  color: white;
-  border-radius: 4px 4px 0 0;
-}
-
-.tablinks {
-  border: none;
-  outline: none;
-}
-
-.tablinks:focus {
-  outline: none;
-}
-
-#member-container {
-  display: flex; 
-  flex-wrap: wrap;
-  width: 85%; 
-  gap: 0px;
-  justify-content: center; 
-  margin: 0 auto;
-}
-
-.member-card{
-  position: relative; 
-  width: 255px; 
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.image-box{
-  margin: 0 auto;
-  width: 225px;       
-  height: 225px;     
-  background-color: #D8E1EE;
-  border-radius: 10px;
-}
-
-.name{
-  font-size: 17px;
-  font-weight: 700;
-  color: #CCB8F9;
-  margin-top: 12px;
-  line-height: 21.25px;
-}
-
-.role{
-  font-size: 10px;
-  font-weight: 400;
-  color: white;
-  margin-top: -5px;
-  line-height: 21.25px;
-}
 
 /* ========================================
    MEDIA QUERIES - RESPONSIVE DESIGN
@@ -707,59 +532,6 @@ iframe {
 
 /* Smartphones (max-width: 575px) */
 @media screen and (max-width: 575px) {
-  main {
-    width: 90%;
-  }
-
-  html, body {
-    background-size: cover; 
-    background-repeat: no-repeat;
-    /* Keep the same background as desktop */
-    background-image: url('../images/graphics/hackhers-stripped-bg.png');
-    min-height: 100vh;
-    background-position: center center;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    max-width: 100%;
-  }
-
-  #footer {
-    background-size: 100% auto;  /* fit width, scale height proportionally */
-    background-repeat: no-repeat;
-    background-position: top center;
-    min-height: 25vh;
-    padding: 0;
-  }
-
-  .contact-info {
-    text-align: center;
-    margin-right: 0;
-    margin-top: 0;
-  }
-
-  #footer h3 {
-    font-size: 2.5rem;
-  }
-
-  .contact-info p {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .contact-info .contact-icons {
-    justify-content: center;
-    font-size: 36px;
-    gap: 20px;
-  }
-
-  #mlh-trust-badge {
-    right: 0px;
-  }
-  
-  #mlh-trust-badge img {
-    width: 60%;
-  }
-
   #title {
     min-height: 50vh; 
     margin: 0;
@@ -843,7 +615,7 @@ iframe {
   }
 
   .dropdown:hover .dropbtn { 
-    background-color: #384d75; 
+    background-color: #2A5482; 
   } 
 
   .section-title {
@@ -910,17 +682,8 @@ iframe {
   .counter{
     margin: 0;
   }
-
-  .dino-image {
-    height: 40px; 
-    width: 30px; 
-  }
-
-  .section#tracks{
-    height: 100vh;
-    margin-top: 20vh;
-  }
-
+/* 
+  uncomment when ready to add
   .section#tracks .container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -945,8 +708,8 @@ iframe {
 
   .section#tracks p {
     font-size: 0.7rem;
-  }
-
+  } */
+/* 
   .section#schedule{
     margin: 0;
     margin-top: 20vh;
@@ -964,7 +727,7 @@ iframe {
 
   .schedule-row {
     font-size: 13px;
-  }
+  } */
 
   #faq {
     width: 100%;
@@ -986,7 +749,7 @@ iframe {
 
   .faq-content {
     margin-top: 250px;  
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   #all-questions {
@@ -1031,36 +794,62 @@ iframe {
     font-size: 16px;
   }
 
-  .section#sponsors{
-    margin: 0;
-    margin-top: 20vh;
+  #footer {
+    min-height: 25vh;
+    padding: 0;
   }
 
-  .section#team{
-    margin: 0;
-    margin-top: 50vh;
+  .contact-info {
+    text-align: center;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 200px;
+  }
+
+  .contact-info h3 {
+    font-size: 2.5rem;
+  }
+
+  .contact-info p {
+    font-size: 20px;
+  }
+
+  .contact-info .contact-icons {
+    justify-content: center;
+    font-size: 36px;
+    gap: 20px;
+  }
+
+  #mlh-trust-badge {
+    right: 0px;
+  }
+  
+  #mlh-trust-badge img {
+    width: 60%;
   }
 }
 
 /* Medium Tablets (600px to 956px) */
 @media (min-width: 600px) and (max-width: 956px) {
-  main {
-    width: 90%;
+  #title {
+    min-height: 60vh;
   }
 
-  #page-bg {
-    background-size:
-      min(700px, 90%) auto,
-      cover;
+  /* increase space btwn title and register button on medium tablets */
+  .title-content {
+    margin: 30px auto 0 auto;
+  }
+
+  #title-date, #title-month, #title-campus, #title-building {
+    font-size: 30px;
   }
 
   #about-info {
     margin-top: 400px;
   }
+
   #about-details-wrapper {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 30px;
     max-width: 100%;
   }
@@ -1069,7 +858,6 @@ iframe {
     flex: none;
     width: 100%;
     margin: 0;
-    text-align: center;
   }
 
   #paragraph {
@@ -1093,16 +881,11 @@ iframe {
 
   .stats-column {
     align-items: center;
-    text-align: center;
   }
 
   .stats-column h2 {
     color: #2A5482;
     font-size: 5rem;
-  }
-
-  .stats-column p {
-    color: white;
   }
 
   .faq-content {
@@ -1129,31 +912,23 @@ iframe {
     padding: 0;
   }
 
-  .navbar-toggler {
-    position: relative;
-    float: right;  
-    padding: 9px 10px; 
-    margin-top: 15px; 
-    margin-right: 15px; 
-    background-color: #450a74; 
-    border: 3px solid #213355; 
-    border-radius: 4px; 
+  #footer {
+    min-height: 40vh;
+    padding: 0;
   }
-
-  .navbar-toggler:hover {
-    background-color: #213355;
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-  }
-
-  #title-date, #title-month, #title-campus, #title-building {
-    font-size: 30px;
-  }
-
 }
 
 /* Larger tablets (ipad pro) and small desktops (max-width: 1300px) */
 @media (min-width: 956px) and (max-width: 1300px) {
+  #title {
+    min-height: 30vh;
+  }
+
+  /* increase space btwn title and register button on ipad pro */
+  .title-content {
+    margin: 50px auto 0 auto;
+  }
+
   #about-info {
     margin-top: 350px;
   }
@@ -1164,5 +939,10 @@ iframe {
 
   .faq-content {
     margin-top: 600px;
+  }
+
+  #footer {
+    min-height: 40vh;
+    padding: 0;
   }
 }
