@@ -350,8 +350,8 @@ a, button, i{
 
 /* SPONSORS SECTION */
 #sponsors::before {
-  background-image: url("../images/graphics/sponsors-train-graphic.png");
-  background-size: 100% auto;  /* fit width, scale height proportionally */
+  background-image: url("../images/graphics/train-sponsors.png");
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: top center;
 }
