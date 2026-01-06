@@ -349,27 +349,31 @@ a, button, i{
 }
 
 /* SPONSORS SECTION */
-#sponsors::before {
+.section#sponsors::before {
   content: "";
-  display: block;
+  position: absolute;
   width: 100%;
-  height: 810px;
+  height: 100%;
   background-image: url("../images/graphics/train-sponsors.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top center;            
+  pointer-events: none;
 }
 
-#sponsors {
-    padding: 60px 0;
+.section#sponsors {
+    position: relative;
+    padding-top: 0;
+    padding: 5vw;
 }
 
 .sponsor-logos {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     width: 90%;
-    margin: 0 auto;
+    margin-top: 50%;
 }
 
 .gallery-item {
@@ -491,15 +495,6 @@ a, button, i{
   max-height: 275px;
   padding-bottom: 25px;
   transition: max-height 0.5s ease, padding-bottom 0.5s ease;
-}
-
-/* SPONSORS */
-
-.section#sponsors{
-  margin-top: 50vh;
-  text-align: center;
-  margin-right: 40vh;
-  margin-left: 40vh;
 }
 
 /*footer*/
