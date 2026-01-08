@@ -393,6 +393,35 @@ a, button, i{
     transform: scale(1.05);
 }
 
+/* SCHEDULE SECTION */
+.section#schedule .schedule-content {
+    position: relative;
+    padding-top: 32%; 
+}
+
+.section#schedule .schedule-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: url("../images/graphics/bridge-schedule.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.schedule-grid {
+    position: relative;
+}
+
+.schedule-image {
+    width: 100%;
+    height: clamp(200px, 100vw, 800px);
+    margin-top: 50%;
+}
+
+
 
 /* FAQ section */
 
