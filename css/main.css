@@ -413,12 +413,14 @@ a, button, i{
 
 .schedule-grid {
     position: relative;
+    position: center;
 }
 
 .schedule-image {
-    width: 100%;
+    display: block;
+    width: 80%;
     height: clamp(200px, 100vw, 800px);
-    margin-top: 50%;
+    margin: 50% auto 15%;
 }
 
 
