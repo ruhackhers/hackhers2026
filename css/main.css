@@ -424,8 +424,6 @@ a, button, i{
 }
 
 
-
-
 /* SPONSORS SECTION */
 .section#sponsors::before {
   content: "";
@@ -604,15 +602,6 @@ a, button, i{
   max-height: 275px;
   padding-bottom: 25px;
   transition: max-height 0.5s ease, padding-bottom 0.5s ease;
-}
-
-/* SPONSORS */
-
-.section#sponsors{
-  margin-top: 50vh;
-  text-align: center;
-  margin-right: 40vh;
-  margin-left: 40vh;
 }
 
 /*footer*/
