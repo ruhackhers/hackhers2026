@@ -255,7 +255,7 @@ a, button, i{
 
 #about::before {
   background-image:
-    url("../images/graphics/city-overlay-with-text-copy.png");
+    url("../images/graphics/about-overlay.png");
   background-size: 100% auto; 
   background-repeat: no-repeat;
   background-position: top center;
@@ -348,10 +348,165 @@ a, button, i{
   opacity: 1;
 }
 
+/* TRACKS SECTION */
+.section#tracks{
+  margin-top: 30vh; 
+  font-family: 'Schoolbell', cursive;
+  color: white;
+  font-weight: 400;
+}
+
+.section#tracks .section-content{
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section#tracks .section-title{
+  font-size: 60px;
+}
+
+#choose-your-char{
+  color: #9BBDEE;
+  font-size: 30px;
+  margin: 0;
+}
+
+/* specific track images */
+.section#tracks .container {
+  justify-content: center;
+  padding: 4vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 boxes per row */
+  justify-items: center;
+  
+  gap: 4rem;                 /* controls spacing between tracks */
+  
+}
+
+.section#tracks .track {
+  width: 100%;
+  max-width: 320px;
+  position: relative;
+}
+
+.section#tracks .image-container {
+  position: relative;
+}
+
+.track p {
+  position: absolute;
+  bottom: 5%;              /* controls vertical overlap */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 50%;
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: black;
+  pointer-events: none;    /* optional, prevents hover blocking */
+
+  /* text-shadow: 0 2px 4px rgba(0,0,0,0.25);*/
+}
+
+
+.image-container:hover .character-image {
+  transition: transform 0.3s ease;
+  transform: scale(1.2); /* Slightly enlarge the image */
+}
+
+.image-container:hover ~ p {
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  transform: translateX(-50%) scale(1.2);
+}
+
+
+
+
+/* SPONSORS SECTION */
+.section#sponsors::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/graphics/train-sponsors.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;            
+  pointer-events: none;
+}
+
+.section#sponsors {
+    position: relative;
+    padding-top: 0;
+    padding: 5vw;
+}
+
+.sponsor-logos {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 90%;
+    margin-top: 50%;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px; 
+    padding: 20px;   
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;      
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* SCHEDULE SECTION */
+.section#schedule .schedule-content {
+    position: relative;
+    padding-top: 32%; 
+}
+
+.section#schedule .schedule-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: url("../images/graphics/bridge-schedule.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.schedule-grid {
+    position: relative;
+    position: center;
+}
+
+.schedule-image {
+    display: block;
+    width: 80%;
+    height: clamp(200px, 100vw, 800px);
+    margin: 50% auto 15%;
+}
+
+
+
 /* FAQ section */
 
 #faq::before {
-  background-image: url("../images/graphics/faq-overlay-with-text-copy.png");
+  background-image: url("../images/graphics/faq-overlay.png");
   background-size: 100% auto;  /* fit width, scale height proportionally */
   background-repeat: no-repeat;
   background-position: top center;
