@@ -826,34 +826,45 @@ a, button, i{
   .counter{
     margin: 0;
   }
-/* 
-  uncomment when ready to add
+
+  /*media queries for tracks section */
+
+
+  /* TRACKS: 1 column, stacked vertically */
   .section#tracks .container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;   /* 1 column */
+    gap: 2rem;                    /* vertical spacing */
+    justify-items: center;
+    justify-content: center;
   }
 
   .section#tracks .track {
-    width: 140px;
-    margin: 5px;
-  }
-
-  .section#tracks #choose-your-char{
-    font-size: 15px;
+    width: 100%;
+    max-width: 260px;             /* keeps images reasonable */
   }
 
   .section#tracks .image-container {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    aspect-ratio: 1 / 1;          /* keeps square images */
+  }
+
+  .section#tracks #choose-your-char {
+    font-size: 18px;
+    text-align: center;
   }
 
   .section#tracks h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   .section#tracks p {
-    font-size: 0.7rem;
-  } */
-/* 
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+/*smartphone media tracks done*/
+
   .section#schedule{
     margin: 0;
     margin-top: 20vh;
@@ -1032,6 +1043,15 @@ a, button, i{
     font-size: 5rem;
   }
 
+  /*tracks resizing*/
+  .section#tracks .container {
+    grid-template-columns: repeat(2, 1fr);  /* 2 column */
+    gap: 3rem;                    /* vertical spacing */
+    justify-items: center;
+    justify-content: center;
+  }
+
+  /*faq resizing*/
   .faq-content {
     margin-top: 500px;
   }
