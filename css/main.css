@@ -520,12 +520,8 @@ a, button, i{
 }
 
 /* SCHEDULE SECTION */
-.section#schedule .schedule-content {
-    position: relative;
-    padding-top: 32%; 
-}
 
-.section#schedule .schedule-content::before {
+.section#schedule::before {
     content: "";
     position: absolute;
     top: 0;
@@ -537,16 +533,18 @@ a, button, i{
     background-position: top center;
 }
 
-.schedule-grid {
+.section#schedule {
     position: relative;
-    position: center;
+    padding-top: 85%; 
 }
 
-.schedule-image {
-    display: block;
-    width: 80%;
-    height: clamp(200px, 100vw, 800px);
-    margin: 50% auto 15%;
+.section#schedule .schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 
