@@ -89,11 +89,11 @@ function openTab(event, tabName) {
             { name: "Zeal Shah", image: "images/team-pics/zeal-shah.jpg", role: "Girls Who Code Director" },
         ],
         'design committee': [
-            { name: "Parinita Chandrashekar", image: "images/team-pics/no-image.jpg"},
-            { name: "Cheryl Lopes", image: "images/team-pics/no-image.jpg"},
-            { name: "Giannah Obando", image: "images/team-pics/no-image.jpg"},
-            { name: "Haaniah Syed Ali", image: "images/team-pics/no-image.jpg"},
-            { name: "Prit Bhathawala", image: "images/team-pics/no-image.jpg"},
+            { name: "Parinita Chandrashekar", image: "images/team-pics/no-image.jpg", role: ""},
+            { name: "Cheryl Lopes", image: "images/team-pics/no-image.jpg", role: ""},
+            { name: "Giannah Obando", image: "images/team-pics/no-image.jpg", role: ""},
+            { name: "Haaniah Syed Ali", image: "images/team-pics/no-image.jpg", role: ""},
+            { name: "Prit Bhathawala", image: "images/team-pics/no-image.jpg", role: ""},
         ],
         'marketing committee': [
             { name: "Allie Domanski", image: "images/team-pics/no-image.jpg", role: "Media" },
