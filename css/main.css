@@ -377,17 +377,22 @@ a, button, i{
   justify-content: center;
   padding: 4vh;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Default: 4 boxes per row */
+  grid-template-columns: repeat(4, 1fr);
+   /* Default: 4 boxes per row */
   justify-items: center;
-  
-  gap: 4rem;                 /* controls spacing between tracks */
-  
+    gap: 4rem;                 /* controls spacing between track*/
+
 }
 
 .section#tracks .track {
-  width: 100%;
-  max-width: 320px;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  width: 80%;
+  max-width: 250px;
   position: relative;
+
+  
 }
 
 .section#tracks .image-container {
@@ -396,32 +401,77 @@ a, button, i{
 
 .track p {
   position: absolute;
-  bottom: 5%;              /* controls vertical overlap */
+  bottom: 10%;              /* controls vertical overlap */
   left: 50%;
   transform: translateX(-50%);
 
-  width: 50%;
+  width: 70%;
   text-align: center;
 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
 
   color: black;
-  pointer-events: none;    /* optional, prevents hover blocking */
 
   /* text-shadow: 0 2px 4px rgba(0,0,0,0.25);*/
 }
 
+.track .ai-ml-track {
+  bottom: 15%;              /* move text up/down */
+}
 
-.image-container:hover .character-image {
+/*trivial*/
+.track .social-good-track {
+  bottom: 10%;              /* move text up/down */
+}
+
+/*trivial*/
+.track .arts-media-track {
+  bottom: 10%;              /* move text up/down */
+}
+
+.track .financial-track {
+  bottom: 15%;              /* move text up/down */
+  transform: translateX(-40%); /* was -50%, smaller = move right */
+  width: 75%;      /* optional: tweak width */
+}
+
+.section#tracks .character-image{
+  width: 750px;              /* Control exact image width */
+  height: auto;              /* Maintain aspect ratio */
+  display: block;
+
+  pointer-events: none;
+
+}
+
+.image-container:hover .character-image { 
+  width: 200px; 
+  height: auto; 
+  display: block; 
+  transition: transform 0.3s ease; 
+  transform: scale(1.1); /* Slightly enlarge the image */ 
+}
+  
+.image-container:hover ~ p { 
+  transition: transform 0.3s ease, font-size 0.3s ease; transform: translateX(-50%) scale(1.2);
+}
+
+.image-container:hover ~ p.ai-ml-track {
+  transform: translateX(-50%) translateY(5%) scale(1.2);
   transition: transform 0.3s ease;
-  transform: scale(1.2); /* Slightly enlarge the image */
 }
 
-.image-container:hover ~ p {
-  transition: transform 0.3s ease, font-size 0.3s ease;
-  transform: translateX(-50%) scale(1.2);
+.image-container:hover ~ p.social-good-track {
+  transform: translateX(-50%) translateY(5%) scale(1.2);
+  transition: transform 0.3s ease;
 }
+
+.image-container:hover ~ p.financial-track {
+  transform: translateX(-40%) scale(1.2);
+  transition: transform 0.3s ease;
+}
+
 
 
 /* SPONSORS SECTION */
@@ -833,19 +883,28 @@ a, button, i{
   /* TRACKS: 1 column, stacked vertically */
   .section#tracks .container {
     grid-template-columns: 1fr;   /* 1 column */
-    gap: 2rem;                    /* vertical spacing */
+    gap: 0rem;                    /* vertical spacing */
     justify-items: center;
     justify-content: center;
   }
 
   .section#tracks .track {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    
+    width: 80%;
+    max-width: 250px;
     width: 100%;
     max-width: 260px;             /* keeps images reasonable */
   }
 
-  .section#tracks .image-container {
-    width: 100%;
-    aspect-ratio: 1 / 1;          /* keeps square images */
+  .track .social-good-track {
+    bottom: 15%;              /* move text up/down */
+  }
+
+  .track .arts-media-track {
+    bottom: 15%;              /* move text up/down */
   }
 
   .section#tracks #choose-your-char {
@@ -858,8 +917,8 @@ a, button, i{
     text-align: center;
   }
 
-  .section#tracks p {
-    font-size: 0.85rem;
+  .track p {
+    font-size: 1rem;
     text-align: center;
   }
 
