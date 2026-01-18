@@ -46,8 +46,9 @@
                     <a href="https://tinyurl.com/hackhers2026" class="nav-link register-btn">Register</a>
                 </li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <!--
+                
                 <li class="nav-item"><a href="#tracks" class="nav-link">Tracks</a></li>
+                <!--
                 <li class="nav-item"><a href="#schedule" class="nav-link">Schedule</a></li>
                 -->
                 <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
@@ -65,7 +66,7 @@
         <div id="myDropdown" class="dropdown-content">
             <li class="drop-item"><a href="https://tinyurl.com/hackhers2026" class="drop-link register-btn-mobile">Register</a></li>
             <li class="drop-item"><a href="#about" class="drop-link">About</a></li>
-            <!-- <li class="drop-item"><a href="#tracks" class="drop-link">Tracks</a></li> -->
+            <li class="drop-item"><a href="#tracks" class="drop-link">Tracks</a></li>
             <!-- <li class="drop-item"><a href="#schedule" class="drop-link">Schedule</a></li> -->
             <li class="drop-item"><a href="#faq" class="drop-link">FAQ</a></li>
             <!-- <li class="drop-item"><a href="#sponsors" class="drop-link">Sponsors</a></li> -->
@@ -297,8 +298,36 @@
     <!-- SPONSORS SECTION - Full width with sponsors background -->
     <!-- Uncomment when ready to add sponsors -->
 
-    <!-- TEAM SECTION - Full width with team background -->
-    <!-- Uncomment when ready to add team -->
+ <!-- TEAM SECTION - Full width with team background -->
+<section class="section" id="team">
+    <div class="team-section">
+        <h1 class="team-title">Meet the Team</h1>
+
+        <!-- Tab Navigation -->
+        <div class="team-tabs">
+            <button class="team-tab active" onclick="switchTeamTab(event, 'eboard')">Eboard</button>
+            <button class="team-tab" onclick="switchTeamTab(event, 'design committee')"> HackHers Design Committee</button>
+            <button class="team-tab" onclick="switchTeamTab(event, 'marketing committee')">HackHers Marketing Committee</button>
+        </div>
+
+        <!-- Decorative bubbles -->
+        <div class="bubble-decoration small bubble-1"></div>
+        <div class="bubble-decoration tiny bubble-2"></div>
+        <div class="bubble-decoration tiny bubble-3"></div>
+        <div class="bubble-decoration small bubble-4"></div>
+        <div class="bubble-decoration tiny bubble-5"></div>
+
+        <div class="carousel-container">
+            <button class="arrow-btn" id="prevBtn" aria-label="Previous team member">&#8249;</button>
+            
+            <div class="team-carousel" id="carousel">
+                <!-- Team members will be dynamically rendered here -->
+            </div>
+
+            <button class="arrow-btn" id="nextBtn" aria-label="Next team member">&#8250;</button>
+        </div>
+    </div>
+</section>
 
 
     <!-- MLH Badge -->
