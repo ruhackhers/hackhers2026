@@ -535,7 +535,7 @@ a, button, i{
 
 .section#schedule {
     position: relative;
-    padding-top: 85%; 
+    padding-top: 83%; 
 }
 
 .section#schedule .schedule-grid {
@@ -543,11 +543,114 @@ a, button, i{
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
+.section#schedule .schedule-column{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔑 centers logs horizontally */
+  gap: 0.5rem;
+}
 
+.section#schedule .schedule-column::before {
+  content: "";
+  position: absolute;
+  top: -60px;          /* 🔑 extend ABOVE first plank */
+  bottom: -60px;       /* 🔑 extend BELOW last plank */
+
+  width: 4px;
+  background-color: rgba(145, 95, 55, 0.45);
+  border-radius: 2px;
+}
+
+.section#schedule .schedule-column::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  bottom: -60px;
+
+  width: 4px;
+  background-color: rgba(145, 95, 55, 0.45);
+  border-radius: 2px;
+}
+
+/* LEFT COLUMN */
+.section#schedule .schedule-column:first-child::before {
+  left: 50px;
+  z-index: 3;
+}
+
+.section#schedule .schedule-column:first-child::after {
+  right: 50px;
+  z-index: 3;
+}
+
+/* RIGHT COLUMN */
+.section#schedule .schedule-column:last-child::before {
+  left: 50px;
+  z-index: 3;
+}
+
+.section#schedule .schedule-column:last-child::after {
+  right: 50px;
+  z-index: 3;
+}
+
+.log {
+  width: 600px;              /* 🔑 longer planks */
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Schoolbell', cursive;
+  font-size: 16px;
+  color: #3b2a1a;
+  text-align: center;
+
+  border-radius: 8px;        /* 🔑 less curve */
+  position: relative;
+  z-index: 1;
+
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,0.35),
+    inset 0 -2px 0 rgba(0,0,0,0.1);
+}
+
+.log-1 { background-color: #D5A278; }
+.log-2 { background-color: #E1B48A; }
+.log-3 { background-color: #F1C9A5; }
+
+
+.section#schedule .schedule-column::before,
+.section#schedule .schedule-column::after {
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,0.25),
+    inset 0 -2px 0 rgba(0,0,0,0.15);
+}
+
+/*.log::before,
+.log::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  width: 3px;
+  background-color: rgba(140, 90, 50, 0.45);
+  border-radius: 2px;
+}
+
+.log::before {
+  left: -12px;
+}
+
+.log::after {
+  right: -12px;
+}*/
 
 /* FAQ section */
 
