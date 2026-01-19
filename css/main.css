@@ -1059,13 +1059,20 @@ a, button, i{
     max-width: 95%;
   }
 
-  
-  /* Adjust rails to stay visible + centered */
   .section#schedule .schedule-column::before,
   .section#schedule .schedule-column::after {
     top: 60px;
     bottom: -60px;
   }
+
+  /* LEFT COLUMN */
+  .section#schedule .schedule-column:first-child::before { left: 40px; }
+  .section#schedule .schedule-column:first-child::after { right: 40px; }
+
+  /* RIGHT COLUMN */
+  .section#schedule .schedule-column:last-child::before { left: 40px; }
+  .section#schedule .schedule-column:last-child::after { right: 40px; }
+
 
   #faq {
     width: 100%;
