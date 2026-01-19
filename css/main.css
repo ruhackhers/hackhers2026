@@ -380,7 +380,7 @@ a, button, i{
   grid-template-columns: repeat(4, 1fr);
    /* Default: 4 boxes per row */
   justify-items: center;
-    gap: 4rem;                 /* controls spacing between track*/
+    gap: 9rem;                 /* controls spacing between track*/
 
 }
 
@@ -389,7 +389,7 @@ a, button, i{
   justify-content: center; /* horizontal */
   align-items: center;     /* vertical */
   width: 80%;
-  max-width: 250px;
+  max-width: 150px;
   position: relative;
 
   
@@ -405,10 +405,10 @@ a, button, i{
   left: 50%;
   transform: translateX(-50%);
 
-  width: 70%;
+  width: 80%;
   text-align: center;
 
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
 
   color: black;
@@ -431,13 +431,13 @@ a, button, i{
 }
 
 .track .financial-track {
-  bottom: 15%;              /* move text up/down */
-  transform: translateX(-40%); /* was -50%, smaller = move right */
+  bottom: 10%;              /* move text up/down */
+  transform: translateX(-30%); /* was -50%, smaller = move right */
   width: 75%;      /* optional: tweak width */
 }
 
 .section#tracks .character-image{
-  width: 750px;              /* Control exact image width */
+  width: 500px;              /* Control exact image width */
   height: auto;              /* Maintain aspect ratio */
   display: block;
 
