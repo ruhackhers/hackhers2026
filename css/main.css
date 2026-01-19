@@ -591,17 +591,19 @@ a, button, i{
 /* RIGHT COLUMN */
 .section#schedule .schedule-column:last-child::before {
   left: 50px;
+  bottom: 140px;
   z-index: 3;
 }
 
 .section#schedule .schedule-column:last-child::after {
   right: 50px;
+  bottom: 140px;
   z-index: 3;
 }
 
 .log {
   width: 90%;
-  height: 64px;
+  height: 70px;
 
   display: flex;
   align-items: center;
@@ -627,9 +629,32 @@ a, button, i{
   font-size: 24px;
 }
 
-.log-1 { background-color: #D5A278; }
-.log-2 { background-color: #E1B48A; }
-.log-3 { background-color: #F1C9A5; }
+:root {
+  --log-1: #D19B6F;
+  --log-2: #D7A67A;
+  --log-3: #DDB083;
+  --log-4: #E3BB8D;
+  --log-5: #E9C597;
+  --log-6: #EFD0A1;
+  --log-7: #F4D9AE;
+  --log-8: #F8E2BB;
+}
+
+.log-1 { background-color: var(--log-1); }
+.log-2 { background-color: var(--log-2); }
+.log-3 { background-color: var(--log-3); }
+.log-4 { background-color: var(--log-4); }
+.log-5 { background-color: var(--log-5); }
+.log-6 { background-color: var(--log-6); }
+.log-7 { background-color: var(--log-7); }
+.log-8 { background-color: var(--log-8); }
+
+
+.log:nth-child(even) {
+  box-shadow:
+    inset 0 2px 0 rgba(255,255,255,0.3),
+    inset 0 -2px 0 rgba(0,0,0,0.12);
+}
 
 .schedule-time,
 .schedule-event,
@@ -652,31 +677,6 @@ a, button, i{
   color: #11560c;
 }
 
-.section#schedule .schedule-column::before,
-.section#schedule .schedule-column::after {
-  box-shadow:
-    inset 0 2px 0 rgba(255,255,255,0.25),
-    inset 0 -2px 0 rgba(0,0,0,0.15);
-}
-
-/*.log::before,
-.log::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  bottom: -10px;
-  width: 3px;
-  background-color: rgba(140, 90, 50, 0.45);
-  border-radius: 2px;
-}
-
-.log::before {
-  left: -12px;
-}
-
-.log::after {
-  right: -12px;
-}*/
 
 /* FAQ section */
 
@@ -1066,12 +1066,18 @@ a, button, i{
   }
 
   /* LEFT COLUMN */
-  .section#schedule .schedule-column:first-child::before { left: 40px; }
+  .section#schedule .schedule-column:first-child::before { left: 40px;  }
   .section#schedule .schedule-column:first-child::after { right: 40px; }
 
   /* RIGHT COLUMN */
-  .section#schedule .schedule-column:last-child::before { left: 40px; }
-  .section#schedule .schedule-column:last-child::after { right: 40px; }
+  .section#schedule .schedule-column:last-child::before { 
+    left: 40px;
+    bottom: -60px; 
+  }
+  .section#schedule .schedule-column:last-child::after { 
+    right: 40px;
+    bottom: -60px;
+  }
 
 
   #faq {
@@ -1256,6 +1262,9 @@ a, button, i{
     bottom: -60px;
   }
 
+  .section#schedule .schedule-column:last-child::after {  bottom: -60px;  }
+  .section#schedule .schedule-column:last-child::before {  bottom: -60px;  }
+  
   /* Rails closer to planks now that width is smaller */
   /*
   .section#schedule .schedule-column::before {
