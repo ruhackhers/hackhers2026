@@ -1129,84 +1129,68 @@ a, button, i{
     width: 60%;
   }
   /* TEAM SECTION */
- .team-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
+  .team-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+  }
 
-.team-tabs {
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 40px;
-}
+  .team-tabs {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px;
+  }
 
-.team-tab {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-}
+  .team-tab {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+  }
 
-.carousel-container {
-    gap: 2px;
-    padding: 0;
-    width: 100%;
-}
+  .carousel-container {
+      gap: 10px;
+      padding: 0 5px;
+  }
 
-.team-carousel {
-    gap: 2px;
-    min-height: 250px;
-}
+  .arrow-btn {
+      font-size: 2rem;
+      padding: 5px;
+      opacity: 0.8;
+      flex-shrink: 0;
+      background: none
+  }
 
-.arrow-btn {
-    font-size: 2.5rem;
-    padding: 5px;
-    opacity: 1;
-    flex-shrink: 0;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-}
+  /* Show only 3 bubbles on mobile */
+  .team-member.far-left,
+  .team-member.far-right {
+      display: none;
+  }
 
-.arrow-btn:active {
-    background: rgba(0, 0, 0, 0.7);
-}
+  .team-member.center .member-bubble {
+      width: 150px;
+      height: 150px;
+  }
 
-.team-member.far-left,
-.team-member.far-right {
-    display: none;
-}
+  .team-member.near-left .member-bubble,
+  .team-member.near-right .member-bubble {
+      width: 100px;
+      height: 100px;
+  }
 
-.team-member.center .member-bubble {
-    width: 140px;
-    height: 140px;
-}
+  .member-name {
+      font-size: 0.9rem;
+  }
 
-.team-member.near-left .member-bubble,
-.team-member.near-right .member-bubble {
-    width: 90px;
-    height: 90px;
-}
+  .member-role {
+      font-size: 0.7rem;
+  }
 
-.member-name {
-    font-size: 0.85rem;
-}
+  .team-member.near-left .member-info,
+  .team-member.near-right .member-info {
+      display: none;
+  }
 
-.member-role {
-    font-size: 0.65rem;
-}
-
-.team-member.near-left .member-info,
-.team-member.near-right .member-info {
-    display: none;
-}
-
-.bubble-decoration {
-    display: none;
-}
+  .bubble-decoration {
+      display: none;
+  }
 
 }
 
