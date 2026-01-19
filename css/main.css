@@ -558,7 +558,7 @@ a, button, i{
 .section#schedule .schedule-column::before {
   content: "";
   position: absolute;
-  top: -60px;          /* 🔑 extend ABOVE first plank */
+  top: 70px;          /* 🔑 extend ABOVE first plank */
   bottom: -60px;       /* 🔑 extend BELOW last plank */
 
   width: 4px;
@@ -569,7 +569,7 @@ a, button, i{
 .section#schedule .schedule-column::after {
   content: "";
   position: absolute;
-  top: -60px;
+  top: 70px;
   bottom: -60px;
 
   width: 4px;
@@ -600,7 +600,7 @@ a, button, i{
 }
 
 .log {
-  width: 600px;              /* 🔑 longer planks */
+  width: 90%;
   height: 64px;
 
   display: flex;
@@ -609,7 +609,7 @@ a, button, i{
 
   font-family: 'Schoolbell', cursive;
   font-size: 16px;
-  color: #3b2a1a;
+  color: #ab774d;
   text-align: center;
 
   border-radius: 8px;        /* 🔑 less curve */
@@ -621,10 +621,36 @@ a, button, i{
     inset 0 -2px 0 rgba(0,0,0,0.1);
 }
 
+.log-date { 
+  background-color: #d1c6c7;
+  height: 76px;
+  font-size: 24px;
+}
+
 .log-1 { background-color: #D5A278; }
 .log-2 { background-color: #E1B48A; }
 .log-3 { background-color: #F1C9A5; }
 
+.schedule-time,
+.schedule-event,
+.schedule-location {
+  flex: 0.25;
+  text-align: left;
+}
+
+.schedule-time {
+  color: #d03847;
+}
+
+.schedule-event {
+  text-align: center;
+  color: #3b2a1a;
+}
+
+.schedule-location {
+  text-align: right;
+  color: #11560c;
+}
 
 .section#schedule .schedule-column::before,
 .section#schedule .schedule-column::after {
@@ -1023,26 +1049,23 @@ a, button, i{
     text-align: center;
   }
 
-/*smartphone media tracks done*/
+  /*smartphone resizing for scheduke*/ 
+  
 
-  .section#schedule{
-    margin: 0;
-    margin-top: 20vh;
+  /*schedule resizing*/
+  .section#schedule .schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 95%;
   }
 
-  #schedule-content {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
+  
+  /* Adjust rails to stay visible + centered */
+  .section#schedule .schedule-column::before,
+  .section#schedule .schedule-column::after {
+    top: 60px;
+    bottom: -60px;
   }
-
-  .schedule-column {
-    width: 90%;
-  }
-
-  .schedule-row {
-    font-size: 13px;
-  } */
 
   #faq {
     width: 100%;
@@ -1206,10 +1229,35 @@ a, button, i{
   /*tracks resizing*/
   .section#tracks .container {
     grid-template-columns: repeat(2, 1fr);  /* 2 column */
-    gap: 3rem;                    /* vertical spacing */
+    gap: 2rem;                    /* vertical spacing */
     justify-items: center;
     justify-content: center;
   }
+
+  /*schedule resizing*/
+  .section#schedule .schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 95%;
+  }
+
+  
+  /* Adjust rails to stay visible + centered */
+  .section#schedule .schedule-column::before,
+  .section#schedule .schedule-column::after {
+    top: 60px;
+    bottom: -60px;
+  }
+
+  /* Rails closer to planks now that width is smaller */
+  /*
+  .section#schedule .schedule-column::before {
+    left: 24px;
+  }
+
+  .section#schedule .schedule-column::after {
+    right: 24px;
+  }*/
 
   /*faq resizing*/
   .faq-content {
@@ -1261,6 +1309,7 @@ a, button, i{
     color: #2A5482;
   }
 
+  
   .faq-content {
     margin-top: 600px;
   }
