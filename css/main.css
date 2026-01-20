@@ -442,7 +442,6 @@ a, button, i{
   display: block;
 
   pointer-events: none;
-
 }
 
 .image-container:hover .character-image { 
@@ -450,7 +449,7 @@ a, button, i{
   height: auto; 
   display: block; 
   transition: transform 0.3s ease; 
-  transform: scale(1.1); /* Slightly enlarge the image */ 
+  transform: scale(1.2); /* Slightly enlarge the image */ 
 }
   
 .image-container:hover ~ p { 
@@ -852,7 +851,7 @@ a, button, i{
    ======================================== */
 
 /* Smartphones (max-width: 575px) */
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 599px) {
   #title {
     min-height: 50vh; 
     margin: 0;
@@ -1032,6 +1031,12 @@ a, button, i{
 
   .track .arts-media-track {
     bottom: 15%;              /* move text up/down */
+    width: 60%;
+  }
+  
+  .track .financial-track {
+    bottom: 15%;              /* move text up/down */
+    transform: translateX(-40%);
   }
 
   .section#tracks #choose-your-char {
