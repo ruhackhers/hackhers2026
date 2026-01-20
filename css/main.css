@@ -427,13 +427,14 @@ a, button, i{
 
 /*trivial*/
 .track .arts-media-track {
-  bottom: 9%;              /* move text up/down */
+  bottom: 10%;              /* move text up/down */
+  width: 95%;
 }
 
 .track .financial-track {
   bottom: 10%;              /* move text up/down */
   transform: translateX(-30%); /* was -50%, smaller = move right */
-  width: 90%;      /* optional: tweak width */
+  width: 95%;      /* optional: tweak width */
 }
 
 .section#tracks .character-image{
@@ -1328,17 +1329,24 @@ a, button, i{
     max-width: 260px;             /* keeps images reasonable */
   }
 
+  .track .ai-ml-track {
+    bottom: 10%;
+    width: 75%;
+  }
+
   .track .social-good-track {
     bottom: 15%;              /* move text up/down */
+    width: 75%;
   }
 
   .track .arts-media-track {
-    bottom: 15%;              /* move text up/down */
+    bottom: 10%;              /* move text up/down */
     width: 60%;
   }
   
   .track .financial-track {
     bottom: 15%;              /* move text up/down */
+    width: 75%;
     transform: translateX(-40%);
   }
 
@@ -1637,6 +1645,27 @@ a, button, i{
     gap: 2rem;                    /* vertical spacing */
     justify-items: center;
     justify-content: center;
+  }
+
+  .track .ai-ml-track {
+    bottom: 12%;
+    width: 85%;
+  }
+
+  .track .social-good-track {
+    bottom: 10%;              /* move text up/down */
+    width: 80%;
+  }
+
+  .track .arts-media-track {
+    bottom: 10%;              /* move text up/down */
+    width: 80%;
+  }
+  
+  .track .financial-track {
+    bottom: 10%;              /* move text up/down */
+    width: 80%;
+    transform: translateX(-40%);
   }
 
   /*schedule resizing*/
