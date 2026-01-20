@@ -750,6 +750,7 @@ a, button, i{
     font-size: 1rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.9);
+    /*color: #342d5e;*/
     margin: 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
