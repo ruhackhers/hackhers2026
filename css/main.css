@@ -1146,8 +1146,12 @@ a, button, i{
   }
 
   .carousel-container {
-      gap: 10px;
+      gap: 5px;
       padding: 0 5px;
+  }
+
+  .team-carousel {
+    gap: 5px;
   }
 
   .arrow-btn {
