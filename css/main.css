@@ -380,7 +380,7 @@ a, button, i{
   grid-template-columns: repeat(4, 1fr);
    /* Default: 4 boxes per row */
   justify-items: center;
-    gap: 9rem;                 /* controls spacing between track*/
+  gap: 9rem;                 /* controls spacing between track*/
 
 }
 
@@ -405,7 +405,7 @@ a, button, i{
   left: 50%;
   transform: translateX(-50%);
 
-  width: 80%;
+  width: 90%;
   text-align: center;
 
   font-size: 14px;
@@ -417,23 +417,23 @@ a, button, i{
 }
 
 .track .ai-ml-track {
-  bottom: 15%;              /* move text up/down */
+  bottom: 8%;              /* move text up/down */
 }
 
 /*trivial*/
 .track .social-good-track {
-  bottom: 10%;              /* move text up/down */
+  bottom: 9%;              /* move text up/down */
 }
 
 /*trivial*/
 .track .arts-media-track {
-  bottom: 10%;              /* move text up/down */
+  bottom: 9%;              /* move text up/down */
 }
 
 .track .financial-track {
   bottom: 10%;              /* move text up/down */
   transform: translateX(-30%); /* was -50%, smaller = move right */
-  width: 75%;      /* optional: tweak width */
+  width: 90%;      /* optional: tweak width */
 }
 
 .section#tracks .character-image{
