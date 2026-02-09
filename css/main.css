@@ -493,6 +493,43 @@ a, button, i{
     padding: 5vw;
 }
 
+/* Sponsor tier labels */
+.sponsor-label {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Schoolbell', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+
+}
+
+/* Gold text */
+.gold-text {
+    color: #d4af37;
+    /*text-shadow: 
+        0 0 6px rgba(212, 175, 55, 0.6),
+        0 0 12px rgba(212, 175, 55, 0.35);*/
+}
+
+/* Silver text */
+.silver-text {
+    color: #545353;
+    /*text-shadow: 
+        0 0 6px rgba(255, 255, 255, 0.5),
+        0 0 12px rgba(200, 200, 200, 0.3);*/
+}
+
+/* Make gallery items positioning-aware */
+.gallery-item {
+    position: relative;
+}
+
 .sponsor-logos {
     position: relative;
     display: grid;
@@ -505,6 +542,7 @@ a, button, i{
     
 }
 
+/*
 .gallery-item {
     overflow: hidden;
     border-radius: 10px; 
@@ -531,6 +569,7 @@ a, button, i{
         0 0 12px rgba(200, 200, 200, 0.25),
         inset 0 0 6px rgba(255, 255, 255, 0.18);
 }
+*/
 
 .gallery-item img {
     width: 90%;
@@ -541,6 +580,10 @@ a, button, i{
 
 .gallery-item img:hover {
     transform: scale(1.15);
+}
+
+.gallery-item:hover .sponsor-label {
+    transform: translateX(-50%) scale(1.15);
 }
 
 /* SCHEDULE SECTION */
