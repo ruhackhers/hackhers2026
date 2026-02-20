@@ -667,19 +667,20 @@ a, button, i{
 /* RIGHT COLUMN */
 .section#schedule .schedule-column:last-child::before {
   left: 50px;
-  bottom: 140px;
+  bottom: 815px;
   z-index: 3;
 }
 
 .section#schedule .schedule-column:last-child::after {
   right: 50px;
-  bottom: 140px;
+  bottom: 815px;
   z-index: 3;
 }
 
 .log {
   width: 90%;
-  height: 70px;
+  min-height: 70px;   /* allow it to grow */
+  padding: 0.8rem 1rem; /*need??*/
 
   display: flex;
   align-items: center;
@@ -706,25 +707,40 @@ a, button, i{
 }
 
 :root {
-  --log-1: #D19B6F;
-  --log-2: #D7A67A;
-  --log-3: #DDB083;
-  --log-4: #E3BB8D;
-  --log-5: #E9C597;
-  --log-6: #EFD0A1;
-  --log-7: #F4D9AE;
-  --log-8: #F8E2BB;
+  --log-1:  #C18255;
+  --log-2:  #C88A5D;
+  --log-3:  #CF9366;
+  --log-4:  #D69B6E;
+  --log-5:  #DDA477;
+  --log-6:  #E4AD80;
+  --log-7:  #EAB689;
+  --log-8:  #F0BF92;
+  --log-9:  #F3C79C;
+  --log-10: #F6CFA6;
+  --log-11: #F8D6B0;
+  --log-12: #FADDBA;
+  --log-13: #FCE4C4;
+  --log-14: #FDEACE;
+  --log-15: #FEF0D8;
+  --log-16: #FFF6E2;
 }
 
-.log-1 { background-color: var(--log-1); }
-.log-2 { background-color: var(--log-2); }
-.log-3 { background-color: var(--log-3); }
-.log-4 { background-color: var(--log-4); }
-.log-5 { background-color: var(--log-5); }
-.log-6 { background-color: var(--log-6); }
-.log-7 { background-color: var(--log-7); }
-.log-8 { background-color: var(--log-8); }
-
+.log-1  { background-color: var(--log-1); }
+.log-2  { background-color: var(--log-2); }
+.log-3  { background-color: var(--log-3); }
+.log-4  { background-color: var(--log-4); }
+.log-5  { background-color: var(--log-5); }
+.log-6  { background-color: var(--log-6); }
+.log-7  { background-color: var(--log-7); }
+.log-8  { background-color: var(--log-8); }
+.log-9  { background-color: var(--log-9); }
+.log-10 { background-color: var(--log-10); }
+.log-11 { background-color: var(--log-11); }
+.log-12 { background-color: var(--log-12); }
+.log-13 { background-color: var(--log-13); }
+.log-14 { background-color: var(--log-14); }
+.log-15 { background-color: var(--log-15); }
+.log-16 { background-color: var(--log-16); }
 
 .log:nth-child(even) {
   box-shadow:
