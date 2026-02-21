@@ -90,17 +90,17 @@ function openTab(event, tabName) {
         ],
         'design committee': [
             { name: "Parinita Chandrashekar", image: "images/team-pics/no-image.jpg", role: ""},
-            { name: "Cheryl Lopes", image: "images/team-pics/no-image.jpg", role: ""},
-            { name: "Giannah Obando", image: "images/team-pics/no-image.jpg", role: ""},
+            { name: "Cheryl Lopes", image: "images/team-pics/cheryl-lopes.jpg", role: ""},
+            { name: "Giannah Obando", image: "images/team-pics/giannah-obando.jpg", role: ""},
             { name: "Haaniah Syed Ali", image: "images/team-pics/no-image.jpg", role: ""},
-            { name: "Prit Bhathawala", image: "images/team-pics/no-image.jpg", role: ""},
+            { name: "Prit Bhathawala", image: "images/team-pics/prit-bhathawala.png", role: ""},
         ],
         'marketing committee': [
             { name: "Allie Domanski", image: "images/team-pics/no-image.jpg", role: "Media" },
-            { name: "Kavya Barathy", image: "images/team-pics/no-image.jpg", role: "Web Development" },
+            { name: "Kavya Barathy", image: "images/team-pics/kavya-barathy.jpeg", role: "Web Development" },
             { name: "Akhila Mahidhara", image: "images/team-pics/akhila-mahidhara.jpg", role: "Web Development" },
-            { name: "Ananya Almeida", image: "images/team-pics/no-image.jpg", role: "Outreach/Media" },
-            { name: "Rebecca Yu", image: "images/team-pics/no-image.jpg", role: "Outreach" },
+            { name: "Ananya Almeida", image: "images/team-pics/ananya-almeida.jpeg", role: "Outreach/Media" },
+            { name: "Rebecca Yu", image: "images/team-pics/rebecca-yu.jpeg", role: "Outreach" },
         ]
     };
 
