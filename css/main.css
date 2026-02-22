@@ -619,13 +619,13 @@ a, button, i{
 /* RIGHT COLUMN */
 .section#schedule .schedule-column:last-child::before {
   left: 50px;
-  bottom: 815px;
+  bottom: 660px;
   z-index: 3;
 }
 
 .section#schedule .schedule-column:last-child::after {
   right: 50px;
-  bottom: 815px;
+  bottom: 660px;
   z-index: 3;
 }
 
